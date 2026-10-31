@@ -7,10 +7,16 @@
 </head>
 <body>
     <header>
-        <h2>header</h2>
+         <ul>
+            @guest
+                <a href="{{ route('show.register') }}">Регистрация</a>
+                <a href="{{ route('show.login') }}">Авторизация</a>
+            @endguest
+        </ul>
     </header>
 
     <main>
+        
         @yield('main')
     </main>
 

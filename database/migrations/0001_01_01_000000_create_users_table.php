@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('full_name');
             $table->string('login');
-            $table->string('email');
-            $table->string('phone');
             $table->string('password');
             $table->enum('role', ['user', 'admin'])->default('user');
             $table->rememberToken();
