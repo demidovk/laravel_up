@@ -31,7 +31,7 @@ class authController extends Controller
             'role'=>$request->role,
         ]);
         
-        return redirect()->route('show.login')->with('success', 'Вы успешно зарегистрировались!');
+        return redirect()->route('login')->with('success', 'Вы успешно зарегистрировались!');
     }
 
     public function showLogin()
@@ -71,7 +71,7 @@ class authController extends Controller
         $request->session()->invalidate();      // полностью сбрасывает сессию
         $request->session()->regenerateToken(); // обновляет CSRF‑токен
 
-        return redirect()->route('show.login');      // или на любую другую страницу
+        return redirect()->route('login');      // или на любую другую страницу
     }
 }
 

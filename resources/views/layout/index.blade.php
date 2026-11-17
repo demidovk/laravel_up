@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>@yield('title', 'Кинотеатр')</title>
+    <meta name="description" content="@yield('description', 'Афиша фильмов и расписание сеансов кинотеатра')">
+    <meta name="keywords" content="@yield('keywords', 'кино, афиша, расписание, сеансы, билеты')">
+
+    @yield('meta')
 </head>
 <body>
     <header>
-         <ul>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog">Афиша</a>
+
             @guest
                 <a href="{{ route('show.register') }}">Регистрация</a>
-                <a href="{{ route('show.login') }}">Авторизация</a>
+                <a href="{{ route('login') }}">Авторизация</a>
             @endguest
-        </ul>
+        </nav>
     </header>
 
     <main>

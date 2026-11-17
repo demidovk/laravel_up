@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MovieImage extends Model
 {
-    protected $fillable = ['movie_id', 'image_url'];
+    protected $fillable = ['movie_id', 'image_path'];
 
     public function movie()
     {
